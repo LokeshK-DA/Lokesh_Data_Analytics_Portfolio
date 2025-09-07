@@ -1,0 +1,9 @@
+// === Churn Dashboard Measures ===
+Total Customers = DISTINCTCOUNT(churn[customer_id])
+Churned Customers = CALCULATE(COUNTROWS(churn), churn[is_churn] = 1)
+Retention Customers = CALCULATE(COUNTROWS(churn), churn[is_churn] = 0)
+
+Churn Rate % = DIVIDE([Churned Customers], [Total Customers])
+Retention Rate % = 1 - [Churn Rate %]
+
+Avg Monthly Charges = AVERAGE(churn[monthly_charges])

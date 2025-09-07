@@ -1,0 +1,11 @@
+// === Sales Dashboard Measures ===
+Total Revenue = SUM(sales[revenue])
+Total Profit = SUM(sales[profit])
+Total Orders = DISTINCTCOUNT(sales[order_id])
+Units Sold = SUM(sales[quantity])
+Avg Order Value = DIVIDE([Total Revenue], [Total Orders])
+
+YoY Revenue % = 
+VAR Curr = CALCULATE([Total Revenue], DATEADD(sales[order_date], 0, YEAR))
+VAR Prev = CALCULATE([Total Revenue], DATEADD(sales[order_date], -1, YEAR))
+RETURN DIVIDE(Curr-Prev, Prev)

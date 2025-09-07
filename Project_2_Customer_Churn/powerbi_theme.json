@@ -1,0 +1,15 @@
+{
+  "name": "Clean Minimal",
+  "visualStyles": {},
+  "dataColors": [
+    "#1a73e8",
+    "#34a853",
+    "#fbbc05",
+    "#ea4335",
+    "#5f6368",
+    "#a142f4"
+  ],
+  "background": "#ffffff",
+  "foreground": "#202124",
+  "tableAccent": "#1a73e8"
+}
